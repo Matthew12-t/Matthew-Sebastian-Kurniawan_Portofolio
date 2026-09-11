@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
-import hackathonImg from "../../public/images/achievements/hackathon.jpg";
+import hackathonImg from "../../public/images/achievements/hackathon.webp";
 
 const FramerImage = motion(Image);
 
@@ -27,7 +27,7 @@ const FeaturedAward = ({ img, title, place, event, organizer, year, summary }) =
 
     <div className="mt-4 flex flex-col items-start">
       <span className="text-lg font-medium text-primary dark:text-primaryDark md:text-base">
-        {place}, {year}
+        {place} &mdash; {year}
       </span>
       <h2 className="my-1 w-full text-left text-3xl font-bold lg:text-2xl">
         {event}
@@ -119,7 +119,7 @@ const Achievements = () => {
                 <Award
                   place="National Finalist"
                   event="Data Slayer 3.0"
-                  organizer="Telkom University, National Data Science Competition"
+                  organizer="Telkom University — National Data Science Competition"
                   year="2025"
                 />
                 <Award
@@ -145,7 +145,7 @@ const Achievements = () => {
           <ul className="grid grid-cols-1 gap-16 md:gap-8">
             <Certification
               title="Global Consumer Intelligence (GCI) Course 2025"
-              issuer="University of Tokyo, Online (Japan)"
+              issuer="University of Tokyo — Online (Japan)"
               period="Sep 2025 – Dec 2025"
               summary="Data science course run by the Matsuo-Iwasawa Laboratory, Graduate School of Engineering, covering machine learning fundamentals, data analysis workflows and practical AI modeling. Passed the final assessment."
             />

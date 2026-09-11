@@ -1,4 +1,4 @@
-# Matthew Sebastian Kurniawan Portofolio
+# Matthew Sebastian Kurniawan — Portofolio
 
 Personal portfolio website built with **Next.js**, **Tailwind CSS** and **Framer Motion**.
 
@@ -52,11 +52,11 @@ public/
 
 ## Editing the content
 
-- **Projects**: edit the `<FeaturedProject>` / `<Project>` entries in `src/pages/projects.js`
-- **Experience & education**: `src/components/Experience.js` and `src/components/Education.js`
-- **Skills**: `src/components/Skills.js`
-- **Achievements**: `src/pages/achievements.js`
-- **Contact links**: the `socials` array in `src/components/NavBar.js`
+- **Projects** — edit the `<FeaturedProject>` / `<Project>` entries in `src/pages/projects.js`
+- **Experience & education** — `src/components/Experience.js` and `src/components/Education.js`
+- **Skills** — `src/components/Skills.js`
+- **Achievements** — `src/pages/achievements.js`
+- **Contact links** — the `socials` array in `src/components/NavBar.js`
 
 ## Contact
 

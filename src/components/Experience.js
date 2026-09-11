@@ -64,7 +64,7 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="AI Researcher (Internship)"
+            position="AI Researcher — Internship"
             company="Indosat Ooredoo Hutchison"
             companyLink="https://www.indosatooredoohutchison.com/"
             time="Jun 2026 – Present"
@@ -78,7 +78,7 @@ const Experience = () => {
           />
 
           <Details
-            position="Software Developer (Freelance)"
+            position="Software Developer — Freelance"
             company="Organic Steel Group"
             companyLink="#"
             time="Apr 2026 – Present"
@@ -91,7 +91,7 @@ const Experience = () => {
           />
 
           <Details
-            position="Developer (Internship)"
+            position="Developer — Internship"
             company="Asa Kreasi Interasia"
             companyLink="#"
             time="Jan 2026 – Apr 2026"
@@ -103,7 +103,7 @@ const Experience = () => {
           />
 
           <Details
-            position="Data Analyst (Internship)"
+            position="Data Analyst — Internship"
             company="Astra Honda Motor"
             companyLink="https://www.astra-honda.com/"
             time="Aug 2025 – Sep 2025"

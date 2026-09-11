@@ -24,12 +24,12 @@ export default function Home() {
       <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex w-full items-center justify-between lg:flex-col">
-            <div className="w-1/2 md:w-full">
+            <div className="w-[42%] lg:w-[55%] md:w-full">
               <Image
                 src={profilePic}
                 alt="Matthew Sebastian Kurniawan"
                 className="h-auto w-full"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                sizes="(max-width: 767px) 100vw, (max-width: 1023px) 55vw, 42vw"
                 priority
               />
             </div>
