@@ -7,6 +7,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Organizations from "@/components/Organizations";
 import TransitionEffect from "@/components/TransitionEffect";
 import profilePic from "../../public/images/profile/matthew-about.webp";
 
@@ -127,6 +128,7 @@ const About = () => {
           <Skills />
           <Experience />
           <Education />
+          <Organizations />
         </Layout>
       </main>
     </>

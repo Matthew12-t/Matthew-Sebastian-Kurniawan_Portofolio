@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 
-const Details = ({ type, time, place, info }) => {
+const Details = ({ role, organization, time, work }) => {
   const ref = useRef(null);
 
   return (
@@ -17,18 +17,27 @@ const Details = ({ type, time, place, info }) => {
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
-          {type}
+          {role}&nbsp;
+          <span className="text-primary dark:text-primaryDark capitalize">
+            @{organization}
+          </span>
         </h3>
         <span className="capitalize text-dark/75 font-medium dark:text-light/75 xs:text-sm">
-          {time} | {place}
+          {time}
         </span>
-        <p className="font-medium w-full md:text-sm mt-2">{info}</p>
+        <ul className="font-medium w-full md:text-sm list-disc pl-4 mt-2">
+          {work.map((item, index) => (
+            <li key={index} className="mt-1">
+              {item}
+            </li>
+          ))}
+        </ul>
       </motion.div>
     </li>
   );
 };
 
-const Education = () => {
+const Organizations = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -38,7 +47,7 @@ const Education = () => {
   return (
     <div className="my-64">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
-        Education
+        Organizational Experience
       </h2>
 
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
@@ -50,10 +59,12 @@ const Education = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Bachelor of Information Systems and Technology"
-            time="Aug 2023 – Present"
-            place="Bandung Institute of Technology (ITB) — GPA 3.54 / 4.00"
-            info="Minor in Data Science & Artificial Intelligence. Coursework in Artificial Intelligence, Machine Learning, Data Mining and Strategic Algorithms, with strong foundations in Algorithms and Data Structures (C) and Object-Oriented Programming (Java), plus end-to-end web application development covering system design, requirement analysis, implementation and testing."
+            role="Academic Division Staff"
+            organization="Himpunan Mahasiswa Informatika ITB"
+            time="Aug 2025 – Dec 2025"
+            work={[
+              "Collected and organized learning resources and academic notes to support learning accessibility for fellow students within the cohort.",
+            ]}
           />
         </ul>
       </div>
@@ -61,4 +72,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default Organizations;
