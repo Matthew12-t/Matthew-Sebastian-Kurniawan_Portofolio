@@ -66,6 +66,15 @@ const Organizations = () => {
               "Collected and organized learning resources and academic notes to support learning accessibility for fellow students within the cohort.",
             ]}
           />
+
+          <Details
+            role="Staff Logistics"
+            organization="Wisuda Oktober HMIF ITB"
+            time="Sep 2024 – Oct 2024"
+            work={[
+              "Assisted event logistics preparation and operational support during graduation ceremony activities.",
+            ]}
+          />
         </ul>
       </div>
     </div>
