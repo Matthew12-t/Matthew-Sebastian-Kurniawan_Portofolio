@@ -44,7 +44,7 @@ export default function Home() {
                 student at Bandung Institute of Technology with a minor in Data
                 Science and Artificial Intelligence. I build speech and language
                 systems that run in production, and the web applications
-                around them. Explore my latest projects below.
+                around them.
               </p>
 
               <div className="mt-2 flex items-center self-start lg:self-center">
