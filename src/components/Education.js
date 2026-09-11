@@ -52,14 +52,14 @@ const Education = () => {
           <Details
             type="Bachelor of Information Systems and Technology"
             time="Aug 2023 – Present"
-            place="Bandung Institute of Technology (ITB) — GPA 3.54 / 4.00"
+            place="Bandung Institute of Technology (ITB), GPA 3.54 / 4.00"
             info="Minor in Data Science & Artificial Intelligence. Coursework in Artificial Intelligence, Machine Learning, Data Mining and Strategic Algorithms, with strong foundations in Algorithms and Data Structures (C) and Object-Oriented Programming (Java), plus end-to-end web application development covering system design, requirement analysis, implementation and testing."
           />
 
           <Details
             type="Global Consumer Intelligence (GCI) Course 2025"
             time="Sep 2025 – Dec 2025"
-            place="University of Tokyo — Online (Japan)"
+            place="University of Tokyo, Online (Japan)"
             info="Data science course run by the Matsuo-Iwasawa Laboratory, Graduate School of Engineering, covering machine learning fundamentals, data analysis workflows and practical AI modeling. Passed the final assessment."
           />
 

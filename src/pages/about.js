@@ -75,7 +75,7 @@ const About = () => {
                 About Me
               </h2>
               <p className="font-medium">
-                Hi, I&apos;m Matthew &mdash; a final-year Information Systems
+                Hi, I&apos;m Matthew, a final-year Information Systems
                 &amp; Technology student at Bandung Institute of Technology with
                 a minor in Data Science and Artificial Intelligence. I care
                 about the part of AI work that most experiments never reach:
@@ -85,7 +85,7 @@ const About = () => {
                 Right now I research Indonesian speech AI at Indosat Ooredoo
                 Hutchison, where I fine-tuned Whisper large-v3 with LoRA on call
                 center audio and rebuilt a real-time speech-to-speech pipeline
-                so every component actually supports Indonesian &mdash; reaching
+                so every component actually supports Indonesian, reaching
                 0.504 s STT latency and under 2 s per conversational turn.
               </p>
               <p className="font-medium">

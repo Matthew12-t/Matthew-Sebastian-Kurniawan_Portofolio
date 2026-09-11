@@ -43,7 +43,7 @@ export default function Home() {
                 I&apos;m a final-year Information Systems &amp; Technology
                 student at Bandung Institute of Technology with a minor in Data
                 Science and Artificial Intelligence. I build speech and language
-                systems that run in production &mdash; and the web applications
+                systems that run in production, and the web applications
                 around them. Explore my latest projects below.
               </p>
 

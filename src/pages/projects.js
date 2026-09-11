@@ -185,7 +185,7 @@ const Projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Project — Indosat Ooredoo Hutchison"
+                type="Featured Project at Indosat Ooredoo Hutchison"
                 title="Real-Time Indonesian Speech-to-Speech AI"
                 img={speechAI}
                 summary="A real-time VAD → STT → LLM → TTS pipeline behind the OpenAI Realtime API, rebuilt so every component supports Indonesian: a LoRA fine-tuned Whisper large-v3 for speech recognition, a fine-tuned Qwen LLM, and a voice-cloned TTS. Reached 0.504 s STT latency and under 2 s per full conversational turn on noisy call center audio."
@@ -196,10 +196,10 @@ const Projects = () => {
 
             <div className="col-span-12">
               <FeaturedProject
-                type="Featured Project — Organic Steel Group"
+                type="Featured Project at Organic Steel Group"
                 title="AI-Assisted Document Processing SaaS"
                 img={docAI}
-                summary="A cloud-based SaaS product built end-to-end and serving 30+ users. Its OCR layer extracts structured data from invoices and receipts — vendor, date, VAT breakdown and line-item detail — removing manual entry. Ships with Stripe payments, nine-language support, and production deployment on AWS."
+                summary="A cloud-based SaaS product built end-to-end and serving 30+ users. Its OCR layer extracts structured data from invoices and receipts (vendor, date, VAT breakdown and line-item detail), removing manual entry. Ships with Stripe payments, nine-language support, and production deployment on AWS."
                 stack="Next.js · React · Node.js/NestJS · Prisma ORM · PostgreSQL · Stripe · AWS (Elastic Beanstalk, RDS, S3, Amplify, CloudFront)"
                 link={GITHUB}
               />
@@ -210,7 +210,7 @@ const Projects = () => {
                 type="Machine Learning"
                 title="Fraud Detection From Scratch"
                 img={fraud}
-                stack="Python · NumPy · Pandas — 4th on the leaderboard, ROC-AUC 0.620"
+                stack="Python · NumPy · Pandas · 4th on the leaderboard with ROC-AUC 0.620"
                 link={GITHUB}
               />
             </div>
@@ -218,7 +218,7 @@ const Projects = () => {
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Mobile Application"
-                title="ChemLab — Interactive Chemistry Learning"
+                title="ChemLab: Interactive Chemistry Learning"
                 img={chemlab}
                 stack="React Native · TypeScript · Supabase · Google OAuth"
                 link={GITHUB}
@@ -228,7 +228,7 @@ const Projects = () => {
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Game Development"
-                title="Spakbor Hills — RPG Farming Simulation"
+                title="Spakbor Hills: RPG Farming Simulation"
                 img={spakbor}
                 stack="Java · OOP design · inventory, NPC interaction, in-game economy"
                 link={GITHUB}

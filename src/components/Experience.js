@@ -64,7 +64,7 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="AI Researcher — Internship"
+            position="AI Researcher (Internship)"
             company="Indosat Ooredoo Hutchison"
             companyLink="https://www.indosatooredoohutchison.com/"
             time="Jun 2026 – Present"
@@ -72,26 +72,26 @@ const Experience = () => {
             work={[
               "Fine-tuned Whisper large-v3 with LoRA (PEFT) on Indonesian call center audio, running a cumulative data-scaling experiment to quantify how transcript quality improves with data volume, then converted the merged model to CTranslate2 (faster-whisper) for production inference.",
               "Researched real-time speech-to-speech frameworks orchestrating STT, LLM and TTS, then extended the selected framework with a new STT backend written from scratch so models could be swapped through a single CLI flag.",
-              "Replaced all three default components — none of which supported Indonesian — with a LoRA fine-tuned Whisper, a fine-tuned Qwen LLM and a voice-cloned TTS, running them as a real-time VAD-STT-LLM-TTS pipeline behind the OpenAI Realtime API at 0.504 s STT latency and under 2 s per full turn.",
-              "Benchmarked MERaLiON, emotion2vec and SpeechBrain on 700 labeled clips, raising UAR from 0.822 to 0.868 by remapping output classes with no additional training — the project's largest gain.",
+              "Replaced all three default components, none of which supported Indonesian, with a LoRA fine-tuned Whisper, a fine-tuned Qwen LLM and a voice-cloned TTS, running them as a real-time VAD-STT-LLM-TTS pipeline behind the OpenAI Realtime API at 0.504 s STT latency and under 2 s per full turn.",
+              "Benchmarked MERaLiON, emotion2vec and SpeechBrain on 700 labeled clips, raising UAR from 0.822 to 0.868 by remapping output classes with no additional training. That was the project's largest gain.",
             ]}
           />
 
           <Details
-            position="Software Developer — Freelance"
+            position="Software Developer (Freelance)"
             company="Organic Steel Group"
             companyLink="#"
             time="Apr 2026 – Present"
             address="Remote"
             work={[
-              "Built AI-assisted document processing (OCR) that extracts structured data from invoices and receipts — vendor, date, VAT breakdown and line-item detail — removing manual entry for these fields.",
+              "Built AI-assisted document processing (OCR) that extracts structured data from invoices and receipts (vendor, date, VAT breakdown and line-item detail), removing manual entry for these fields.",
               "Developed and maintained a cloud-based SaaS application end-to-end with Next.js, React, Node.js/NestJS, Prisma ORM and PostgreSQL, serving 30+ users.",
               "Delivered Stripe payment integration and multilingual support across 9 languages, and owned deployment and production maintenance on AWS (Elastic Beanstalk, RDS, S3, Amplify, CloudFront).",
             ]}
           />
 
           <Details
-            position="Developer — Internship"
+            position="Developer (Internship)"
             company="Asa Kreasi Interasia"
             companyLink="#"
             time="Jan 2026 – Apr 2026"
@@ -103,7 +103,7 @@ const Experience = () => {
           />
 
           <Details
-            position="Data Analyst — Internship"
+            position="Data Analyst (Internship)"
             company="Astra Honda Motor"
             companyLink="https://www.astra-honda.com/"
             time="Aug 2025 – Sep 2025"
