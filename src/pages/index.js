@@ -6,7 +6,7 @@ import AnimatedText from "@/components/AnimatedText";
 import HireMe from "@/components/HireMe";
 import TransitionEffect from "@/components/TransitionEffect";
 import { LinkArrow } from "@/components/Icons";
-import profilePic from "../../public/images/profile/matthew-hero.png";
+import profilePic from "../../public/images/profile/matthew-hero.webp";
 
 export default function Home() {
   return (

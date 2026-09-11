@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
-import profilePic from "../../public/images/profile/matthew-about.png";
+import profilePic from "../../public/images/profile/matthew-about.webp";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
