@@ -13,7 +13,7 @@ import docAI from "../../public/images/projects/doc-ai-saas.png";
 import chemlab from "../../public/images/projects/chemlab.png";
 import fraud from "../../public/images/projects/fraud-detection.png";
 import spakbor from "../../public/images/projects/spakbor-hills.png";
-import kaiDb from "../../public/images/projects/kai-database.png";
+import kaiTicketing from "../../public/images/projects/kai-ticketing.webp";
 
 const FramerImage = motion(Image);
 
@@ -120,76 +120,103 @@ const FeaturedProject = ({ type, title, summary, img, link, github, stack }) => 
   );
 };
 
-const Project = ({ title, type, img, link, github, stack }) => (
-  <article
-    className="relative flex w-full flex-col items-center justify-center rounded-2xl
-    border border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark xs:p-4"
-  >
-    <div
-      className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem]
-      bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
+// `link` is optional here too: the KAI coursework has no public repository.
+const Project = ({ title, type, img, link, github, stack }) => {
+  const outbound = link
+    ? {
+        target: link.startsWith("http") ? "_blank" : undefined,
+        rel: link.startsWith("http") ? "noopener noreferrer" : undefined,
+      }
+    : {};
+
+  const cover = (
+    <FramerImage
+      src={img}
+      alt={title}
+      className="h-auto w-full"
+      whileHover={link ? { scale: 1.05 } : undefined}
+      transition={{ duration: 0.2 }}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
     />
+  );
 
-    <Link
-      href={link}
-      target={link.startsWith("http") ? "_blank" : undefined}
-      rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
-      className="w-full cursor-pointer overflow-hidden rounded-lg"
+  return (
+    <article
+      className="relative flex w-full flex-col items-center justify-center rounded-2xl
+      border border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark xs:p-4"
     >
-      <FramerImage
-        src={img}
-        alt={title}
-        className="h-auto w-full"
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.2 }}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      <div
+        className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem]
+        bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
       />
-    </Link>
 
-    <div className="mt-4 flex w-full flex-col items-start justify-between">
-      <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
-        {type}
-      </span>
-      <Link
-        href={link}
-        target={link.startsWith("http") ? "_blank" : undefined}
-        rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
-        className="underline-offset-2 hover:underline"
-      >
-        <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
-          {title}
-        </h2>
-      </Link>
-      <p className="text-sm font-medium text-dark/60 dark:text-light/60">
-        {stack}
-      </p>
-
-      <div className="mt-2 flex w-full items-center justify-between">
+      {link ? (
         <Link
           href={link}
-          target={link.startsWith("http") ? "_blank" : undefined}
-          rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="text-lg font-medium underline md:text-base"
+          {...outbound}
+          className="w-full cursor-pointer overflow-hidden rounded-lg"
         >
-          Visit
+          {cover}
         </Link>
-        {github ? (
+      ) : (
+        <div className="w-full overflow-hidden rounded-lg">{cover}</div>
+      )}
+
+      <div className="mt-4 flex w-full flex-col items-start justify-between">
+        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+          {type}
+        </span>
+
+        {link ? (
           <Link
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-8 md:w-6"
-            aria-label={`${title} GitHub repository`}
+            href={link}
+            {...outbound}
+            className="underline-offset-2 hover:underline"
           >
-            <GithubIcon className="text-dark dark:text-light" />
+            <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+              {title}
+            </h2>
           </Link>
+        ) : (
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+            {title}
+          </h2>
+        )}
+
+        <p className="text-sm font-medium text-dark/60 dark:text-light/60">
+          {stack}
+        </p>
+
+        {link || github ? (
+          <div className="mt-2 flex w-full items-center justify-between">
+            {link ? (
+              <Link
+                href={link}
+                {...outbound}
+                className="text-lg font-medium underline md:text-base"
+              >
+                Visit
+              </Link>
+            ) : (
+              <span />
+            )}
+            {github ? (
+              <Link
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 md:w-6"
+                aria-label={`${title} GitHub repository`}
+              >
+                <GithubIcon className="text-dark dark:text-light" />
+              </Link>
+            ) : null}
+          </div>
         ) : null}
       </div>
-    </div>
-  </article>
-);
-
-const GITHUB = "https://github.com/Matthew12-t";
+    </article>
+  );
+};
 
 const Projects = () => {
   return (
@@ -238,7 +265,8 @@ const Projects = () => {
                 title="Fraud Detection From Scratch"
                 img={fraud}
                 stack="Python · NumPy · Pandas — 4th on the leaderboard, ROC-AUC 0.620"
-                link={GITHUB}
+                link="https://github.com/Matthew12-t/Tubes2AI-IF3070"
+                github="https://github.com/Matthew12-t/Tubes2AI-IF3070"
               />
             </div>
 
@@ -248,7 +276,8 @@ const Projects = () => {
                 title="ChemLab — Interactive Chemistry Learning"
                 img={chemlab}
                 stack="React Native · TypeScript · Supabase · Google OAuth"
-                link={GITHUB}
+                link="https://github.com/Matthew12-t/UAS_PAWM-II3140-Kelompok_14"
+                github="https://github.com/Matthew12-t/UAS_PAWM-II3140-Kelompok_14"
               />
             </div>
 
@@ -258,7 +287,8 @@ const Projects = () => {
                 title="Spakbor Hills — RPG Farming Simulation"
                 img={spakbor}
                 stack="Java · OOP design · inventory, NPC interaction, in-game economy"
-                link={GITHUB}
+                link="https://github.com/Matthew12-t/TUGAS-BESAR-OOP_K05_T07"
+                github="https://github.com/Matthew12-t/TUGAS-BESAR-OOP_K05_T07"
               />
             </div>
 
@@ -266,9 +296,8 @@ const Projects = () => {
               <Project
                 type="Database Design"
                 title="KAI Ticketing & Train Operation Modeling"
-                img={kaiDb}
+                img={kaiTicketing}
                 stack="MySQL · ERD modeling · normalization"
-                link={GITHUB}
               />
             </div>
           </div>
