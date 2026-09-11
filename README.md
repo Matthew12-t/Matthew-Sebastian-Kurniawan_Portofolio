@@ -1,47 +1,71 @@
-# Next.Js Website Tutorial: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+# Matthew Sebastian Kurniawan — Portofolio
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=KashFlow&maxAge=3600)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
+Personal portfolio website built with **Next.js**, **Tailwind CSS** and **Framer Motion**.
 
-This repository contains starter code for Portfolio website created using NextJs. <br />
+Final-year Information Systems & Technology student at Bandung Institute of Technology,
+minor in Data Science & Artificial Intelligence. AI Engineering, AI Research and
+Software Engineering.
 
-For Demo and Final Code checkout following link👇: <br />
-[Nextjs Portfolio Website](https://devdreaming.com//videos/nextjs-tutorial-build-portfolio-tailwind-css-framer-motion#code-links) <br />
+## Pages
 
-If you want to learn how to create it please follow below tutorial👇: <br />
-https://youtu.be/Yw7yWHigGKI <br />
-[![YouTube Video Views](https://img.shields.io/youtube/views/Yw7yWHigGKI?style=social)](https://youtu.be/Yw7yWHigGKI)<br />
+| Route           | Content                                                              |
+| --------------- | -------------------------------------------------------------------- |
+| `/`             | Hero, short introduction, downloadable resume                        |
+| `/about`        | Biography, animated stats, skills, experience and education timelines |
+| `/projects`     | Featured work and university projects                                 |
+| `/achievements` | Competition results and certifications                                |
 
----
-✨ Checkout my brand new Saas application -> [AI Headshot Generator](https://www.smartheadshots.ai)
+## Tech stack
 
----
+- [Next.js 15](https://nextjs.org/) (Pages Router)
+- [Tailwind CSS 3](https://tailwindcss.com/) with a class-based dark mode
+- [Framer Motion](https://www.framer.com/motion/) for page transitions and scroll animations
+- `next/font` (Montserrat) and `next/image` for asset optimization
 
-### Images of The Portfolio Website:
+## Getting started
 
-![Nextjs Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-light-desktop.png)
-![Nextjs Portfolio Website Dark Mode](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-dark-desktop.png)
-![Next.js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-desktop.png)
-![Next js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-dark-desktop.png)
-![Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-desktop.png)
-![Responsive Portfolio Website In Nextjs](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-mobile.png)
-![Responsive Portfolio Website In Next js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-light-mobile.png)
-![Mobile Responsive Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-mobile.png)
+```bash
+npm install
+npm run dev
+```
 
+Open [http://localhost:3000](http://localhost:3000).
 
-### Resources Used in This Project
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # eslint
+```
 
-- Profile image in the home page created by using https://www.midjourney.com/ tool.
-- Profile image in the about page by [Albert Dera](https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
-on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-- Fonts from https://fonts.google.com/ <br />
-- Icons from https://iconify.design/ <br />
-- LightBulb Svg from https://lukaszadam.com/illustrations <br />
+## Project structure
 
-### External Libraries used in this project:
+```
+src/
+├── components/   # NavBar, Footer, Layout, Skills, Experience, Education, Icons, ...
+├── hooks/        # useThemeSwitcher (dark mode + localStorage)
+├── pages/        # index, about, projects, achievements
+└── styles/       # Tailwind entry point
+public/
+├── images/       # profile, project covers, achievements
+└── *.pdf         # resume
+```
 
-- [framer-motion](https://www.framer.com/motion/) <br />
-- [Tailwind css](https://tailwindcss.com/) <br />
+## Editing the content
 
+- **Projects** — edit the `<FeaturedProject>` / `<Project>` entries in `src/pages/projects.js`
+- **Experience & education** — `src/components/Experience.js` and `src/components/Education.js`
+- **Skills** — `src/components/Skills.js`
+- **Achievements** — `src/pages/achievements.js`
+- **Contact links** — the `socials` array in `src/components/NavBar.js`
 
+## Contact
+
+- Email: matthewsebastian1107@gmail.com
+- LinkedIn: [matthew-sebastian-kurniawan](https://www.linkedin.com/in/matthew-sebastian-kurniawan)
+- GitHub: [Matthew12-t](https://github.com/Matthew12-t)
+
+## Credits
+
+Layout and animation patterns are based on the
+[Next.js Developer Portfolio](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code)
+starter by [CodeBucks](https://github.com/codebucks27). All content, copy and assets are my own.
